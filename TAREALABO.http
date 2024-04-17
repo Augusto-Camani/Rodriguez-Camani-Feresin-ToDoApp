@@ -1,0 +1,6 @@
+@TAREALABO_HostAddress = http://localhost:5031
+
+GET {{TAREALABO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
