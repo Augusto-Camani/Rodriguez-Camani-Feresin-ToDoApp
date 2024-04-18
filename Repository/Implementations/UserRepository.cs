@@ -5,7 +5,6 @@ namespace TAREALABO;
 
 public class UserRepository : Repository, IUserRepository
 {
-
     public UserRepository(ToDoContext context) : base(context)
     {
     }
@@ -18,6 +17,7 @@ public class UserRepository : Repository, IUserRepository
     public void DeleteUser(int id)
     {
         _context.Users.Remove(GetUserById(id));
+        _context.SaveChanges();
     }
 
     public User GetUserById(int id)
